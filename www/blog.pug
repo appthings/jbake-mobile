@@ -1,0 +1,126 @@
+doctype html
+html
+	head
+		meta(charset='utf-8')
+		meta(name='viewport', content='width=device-width, initial-scale=1, maximum-scale=1, minimum-scale=1, user-scalable=no, minimal-ui, viewport-fit=cover')
+
+		title jBake Mobi
+		link(rel='stylesheet', href='assets/fr7/framework7.css')
+		link(rel='stylesheet', href='assets/fonts/framework7-icons.css')
+		link(rel='stylesheet', href='assets/fonts/material-icons.css')
+
+		script(type='text/javascript', src='//cdn.jsdelivr.net/npm/framework7@2.0.6/dist/js/framework7.js')
+
+	body
+		#app.framework7-root
+			.page
+				//fixed header
+				.navbar
+					.navbar-inner
+						.left
+						.title.sliding jBake Mobi
+
+				// fixed footer		
+				.toolbar.toolbar-bottom-md
+					.toolbar-inner
+						.block jBake Mobi
+
+				// main view .page-content 
+				.page-content
+					.view.view-main.ios-edges
+						//inner page
+						.page(data-name='home') 
+							.swiper-container
+								.swiper-wrapper
+									.swiper-slide
+										.card
+											.card-header Header
+											.card-content.card-content-padding
+												p oh hi 1 
+												a(href='/zoom/') More?
+											.card-footer Footer
+
+										.card
+											.card-header Header
+											.card-content.card-content-padding oh hi 1 
+											.card-footer Footer
+
+										.card
+											.card-header Header
+											.card-content.card-content-padding oh hi 1 
+											.card-footer Footer
+
+									.swiper-slide
+										.card
+											.card-header Header
+											.card-content.card-content-padding oh hi 2
+											.card-footer Footer
+
+										.card
+											.card-header Header
+											.card-content.card-content-padding oh hi 2 
+											.card-footer Footer
+
+										.card
+											.card-header Header
+											.card-content.card-content-padding oh hi 2 
+											.card-footer Footer
+
+									.swiper-slide
+										.card
+											.card-header Header
+											.card-content.card-content-padding oh hi 3 
+											.card-footer Footer
+
+										.card
+											.card-header Header
+											.card-content.card-content-padding oh hi 3 
+											.card-footer Footer
+
+										.card
+											.card-header Header
+											.card-content.card-content-padding oh hi 3 
+											.card-footer Footer
+
+
+		script.
+			var routes_ = [
+					{ path: '/zoom/', url: 'pages/zoom.html'},
+				]
+			var app = new Framework7({
+					root: '#app',
+					routes: routes_
+				});
+			console.log('hi')
+
+			var swiper = app.swiper.create('.swiper-container', {
+			   direction: 'vertical',
+				pagination: {
+					el: '.swiper-pagination',
+					clickable: true,
+				 }
+			})
+
+			var main = app.views.create('.view-main', {
+					view: {
+						pushState: true,
+						xhrCache: false
+					}
+				})
+			
+			//main.router.navigate('/zoom/')
+
+		style.
+
+			.swiper-container {
+				height: 100%; 
+			}
+
+			.swiper-slide {
+				background: #ccc;
+				display: flex;
+				flex-direction: column;
+				xjustify-content: space-around;
+				align-items: stretch;
+
+			}
