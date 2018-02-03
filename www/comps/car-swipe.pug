@@ -1,0 +1,43 @@
+car-swipe
+	.list
+			ul
+				// "swipeout" class on li
+				li.swipeout( data-guid= { guid }, data-ex='1' )
+					.swipeout-content
+						.card
+							.card-header { guid }
+							.card-content.card-content-padding
+								p oh hi 1 
+								a.pan-open(href='#', data-pk='123123') More
+							.card-footer Footer
+					// Swipeout
+					.swipeout-actions-right
+							a(href='#') Read more? ...
+
+	script.
+		this.on('mount', function(){
+			this.guid = opts.guid
+			this.update()
+
+			$$('.swipeout', this.root).on('swipeout:open', function () {
+				console.log(opts.guid)
+				app.panel.open('right', true)
+
+			})
+
+		})// on mount
+
+
+	style.
+
+		car-swipe .list {
+			margin: 1px !important;
+
+		}
+
+		.list ul:before {
+			width: 0px !important;
+		}
+		.list ul:after {
+			width: 0px !important;
+		}

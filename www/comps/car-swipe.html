@@ -1,0 +1,49 @@
+
+<car-swipe>
+  <div class="list">
+    <ul>
+      <!-- "swipeout" class on li-->
+      <li class="swipeout" data-guid="{}" data-ex="1">
+        <div class="swipeout-content">
+          <div class="card">
+            <div class="card-header">{ guid }</div>
+            <div class="card-content card-content-padding">
+              <p>oh hi 1 </p><a class="pan-open" href="#" data-pk="123123">More</a>
+            </div>
+            <div class="card-footer">Footer</div>
+          </div>
+        </div>
+        <!-- Swipeout-->
+        <div class="swipeout-actions-right"><a href="#">Read more? ...</a></div>
+      </li>
+    </ul>
+  </div>
+  <script>
+    this.on('mount', function(){
+    	this.guid = opts.guid
+    	this.update()
+    
+    	$$('.swipeout', this.root).on('swipeout:open', function () {
+    		console.log(opts.guid)
+    		app.panel.open('right', true)
+    
+    	})
+    
+    })// on mount
+    
+    
+  </script>
+  <style>
+    car-swipe .list {
+    	margin: 1px !important;
+    
+    }
+    
+    .list ul:before {
+    	width: 0px !important;
+    }
+    .list ul:after {
+    	width: 0px !important;
+    }
+  </style>
+</car-swipe>
