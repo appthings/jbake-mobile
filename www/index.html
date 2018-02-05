@@ -7,44 +7,48 @@
     <link rel="stylesheet" href="assets/fr7/framework7.css">
     <link rel="stylesheet" href="assets/fonts/framework7-icons.css">
     <link rel="stylesheet" href="assets/fonts/material-icons.css">
+    <script src="//cdn.jsdelivr.net/npm/loadjs@3.5.2/dist/loadjs.js"></script>
   </head>
   <body>
     <style type="riot"></style>
     <script src="comps/car-swipe.tag" type="riot/tag"></script>
     <div id="app">
-      <div class="page">
-        <!--right-->
-        <div class="panel panel-right panel-cover">
-          <div class="view">
-            <div class="page" data-name="panel-r"> 
-              <div class="navbar">
-                <div class="navbar-inner">
-                  <div class="title">Story</div>
-                </div>
+      <!--.page-->
+      <!--right-->
+      <div class="panel panel-right panel-cover">
+        <div class="view">
+          <div class="page" data-name="panel-r"> 
+            <div class="navbar">
+              <div class="navbar-inner">
+                <div class="title">Story</div>
               </div>
-              <div class="page-content">
-                <div class="block">Here is where the story goes</div>
-              </div>
+            </div>
+            <div class="page-content">
+              <div class="block">Here is where the story goes</div>
             </div>
           </div>
         </div>
-        <!--fixed header-->
-        <div class="navbar">
-          <div class="navbar-inner">
-            <div class="left"></div>
-            <div class="title sliding">jBake Mobi</div>
-          </div>
-        </div>
-        <!-- fixed footer		-->
-        <div class="toolbar toolbar-bottom-md">
-          <div class="toolbar-inner">
-            <div class="block">jBake Mobi</div>
-          </div>
-        </div>
-        <!-- fixed main view .page-content -->
+      </div>
+      <!-- fixed main view .page-content -->
+      <!--.page-->
+      <div class="view">
         <div class="page">
-          <div class="view view-main ios-edges">
-            <div class="page" data-name="swiper"> 
+          <!--fixed header-->
+          <div class="navbar">
+            <div class="navbar-inner">
+              <div class="left"></div>
+              <div class="title sliding">jBake Mobi</div>
+            </div>
+          </div>
+          <!-- fixed footer		-->
+          <div class="toolbar toolbar-bottom-md">
+            <div class="toolbar-inner">
+              <div class="block">jBake Mobi</div>
+            </div>
+          </div>
+          <div class="view-main ios-edges">
+            <!--route's main, .page-content if you want scroll-->
+            <div class="page">
               <div class="swiper-container">
                 <div class="swiper-wrapper">
                   <div class="swiper-slide">
@@ -78,8 +82,9 @@
         </div>
       </div>
     </div>
-    <script type="text/javascript" src="//cdn.jsdelivr.net/npm/framework7@2.0.6/dist/js/framework7.js"></script>
+    <script src="//cdn.jsdelivr.net/npm/framework7@2.0.6/dist/js/framework7.js"></script>
     <script src="//cdn.jsdelivr.net/npm/riot@3.8/riot+compiler.min.js"></script>
+    <script src="//cdn.jsdelivr.net/npm/rss-parser@3.0.1/dist/rss-parser.js"></script>
     <script>
       var $$ = Dom7
       riot.compile(function() { // load the comps as js and then do swiperInit()
@@ -112,8 +117,8 @@
     </script>
     <style>
       .swiper-container {
-      	height: calc(100vh - 104px); 
-      	margin-top: 56px;
+      	height: calc(100vh - 114px); 
+      	margin-top: 65px;
       }
       
       .cars {
