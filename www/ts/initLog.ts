@@ -1,0 +1,1 @@
+//type in your logz.io key here
