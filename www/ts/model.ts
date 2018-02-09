@@ -17,7 +17,7 @@ var story = fluxify.createStore({
 		}//action
 	}//c-bs
 })//()
-console.log('model ready' )
+Logger.log('model ready' )
 
 /*
 var item = new Object();
@@ -25,7 +25,7 @@ item.a = 'b'
 
 set up event listener s
 story.on( 'change', function( updates ){
-	console.log( story.getState() )
+	Logger.log( story.getState() )
 })
 
 act('updateStory', item )
@@ -38,6 +38,6 @@ const STAR = 'assets/feed.xml'
 
 var parser = new RSSParser()
 function access() {//specify url
-	console.log('fetching')
+	Logger.log('fetching')
 	return CORS+RED;
 }
