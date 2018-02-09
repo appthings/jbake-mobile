@@ -27,9 +27,9 @@
 **/build/*
 
 # project
-# **/*.html
-# **/*.css
-# **/*.js
+**/*.html
+**/*.css
+**/*.js
 
 !zdat/doc/**/*
 
