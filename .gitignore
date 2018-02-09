@@ -27,11 +27,12 @@
 **/build/*
 
 # project
-
 # **/*.html
+# **/*.css
+# **/*.js
+
 !zdat/doc/**/*
 
-# **/*.css
 **/*.log
 **/*.jtl
 **/dat.jar
