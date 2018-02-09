@@ -1,17 +1,16 @@
 # fR7
 
-Mobile CMS example, uses FrameWork7, Flux, RiotJS and Pug/Jade.
+Mobile CMS example, WIP. Uses FrameWork7, Flux, RiotJS and Pug/Jade.
 
+Here is a youtube demo:
 
-Here is a youtube of what it looks like:
-
-To build:
+To build/run:
 
 (Skip step 1 for now.)
 1. Get logging, w/ account on logz.io.
 Edit www/ts/initLog w/ your key
 
-2. Build:
+2. Build: (first we need gulp dependencies )
 
 npm -i
 
@@ -27,7 +26,7 @@ in VSCode I use 'LiveServer' plugin.
 
 Open in browser.
 
-4. Modify.
+4. Modify:
 
 gulp watch
 
