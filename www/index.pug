@@ -49,26 +49,36 @@ html
 						.page
 							swiper
 
-		script(src='//cdn.jsdelivr.net/npm/framework7@2.0.6/dist/js/framework7.js')
-		script(src='//cdn.jsdelivr.net/npm/rss-parser@3.0.1/dist/rss-parser.js')
 		script(src='ts/model.js')
 
 		script.
-			var $$ = Dom7
-			var app = new Framework7({
-				root: '#app',
-				on: {
-					init: function () {
-						Logger.log('app')
-					}//init
-				}//on
-			})//app
+			loadjs(['//cdn.jsdelivr.net/npm/framework7@2.0.6/dist/js/framework7.js'
+				, '//cdn.jsdelivr.net/npm/rss-parser@3.0.1/dist/rss-parser.js'], 'deps')
 
-			initSwiperComp()
+			loadjs.ready('deps', {
+				success: function() { onReady() },
+				error: function(depsNotFound) { Logger.log('could not load', depsNotFound ) }
+			})
+
+			function onReady() {
+				$$ = Dom7
+				var app = new Framework7({
+					root: '#app',
+					on: {
+						init: function () {
+							Logger.log('app')
+						}//init
+					}//on
+				})//app
+
+				modelInit()
+				initSwiperComp()
+				riot.mount('r-pan')
+			}
+
 			function initSwiperComp() {
 				riot.mount('swiper')
 			}
-			riot.mount('r-pan')
 
 		style.
 			.panel {

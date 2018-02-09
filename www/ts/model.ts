@@ -1,6 +1,10 @@
 
+declare var Logger: any
+
 declare var fluxify: any
 declare var RSSParser: any
+
+declare var parser: any
 
 // fluxify
 function act(action, arg) {// sugar
@@ -36,7 +40,10 @@ const CORS = 'https://cors-anywhere.herokuapp.com/'
 const RED =  'https://www.reddit.com/.rss'
 const STAR = 'assets/feed.xml'
 
-var parser = new RSSParser()
+function modelInit() {
+	parser = new RSSParser()
+}
+
 function access() {//specify url
 	Logger.log('fetching')
 	return CORS+RED;
