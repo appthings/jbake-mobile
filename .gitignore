@@ -1,0 +1,25 @@
+# ban all
+*
+!*/
+node_modules
+
+# except white list to include (w/ ! prefix) :
+!.gitignore
+!**/*.less
+!**/*.pug
+!**/*.ts
+
+!**/*.eot
+!**/*.ttf
+!**/*.woff
+!**/*.woff2
+
+!**/*.ico
+!**/*.png
+!**/*.svg
+!**/*.jpg
+
+!package.json
+!gulpfile.js
+!README.md
+!Wedgefile
