@@ -37,7 +37,7 @@ const RED =  'https://www.reddit.com/.rss'
 const STAR = 'assets/feed.xml'
 
 var parser = new RSSParser()
-function access() {
+function access() {//specify url
 	console.log('fetching')
-	return STAR;
+	return CORS+RED;
 }
