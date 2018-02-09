@@ -3,23 +3,31 @@
 !*/
 node_modules
 
-# except white list to include (w/ ! prefix) :
+# except white list to 
+# include (w/ ! prefix) :
 !.gitignore
 !**/*.less
+!**/*.scss
+!**/*.sass
 !**/*.pug
 !**/*.ts
+!**/*.md
 
+!/www/assets/fonts/*.css
 !**/*.eot
 !**/*.ttf
 !**/*.woff
 !**/*.woff2
 
+#assets
 !**/*.ico
 !**/*.png
 !**/*.svg
 !**/*.jpg
 
+#specific
 !package.json
 !gulpfile.js
-!README.md
 !Wedgefile
+
+

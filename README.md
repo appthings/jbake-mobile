@@ -1,8 +1,8 @@
 # fR7
 
-Mobile CMS example, WIP. Uses FrameWork7, Flux, RiotJS and Pug/Jade.
+Mobile CMS example, Work in Progress. Uses Framework7, Flux, RiotJS and Pug/Jade.
 
-Here is a youtube demo:
+Here is a youtube demo to watch: http://youtu.be/y2Ac3iPW_yc
 
 To build/run:
 
@@ -32,3 +32,4 @@ gulp watch
 
 Change www/ts/model.ts access method to return a different RSS file
 
+Build and code comments wellcome. Just usee a git issue to do that.

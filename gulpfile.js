@@ -39,7 +39,6 @@ gulp.task('html', function() {
 		.pipe(gulp.dest('./www/'))
 	})
 
-
 gulp.task('comp', function() {  
 	return gulp.src('./www/comps/*.pug')
 		.pipe( pug(
