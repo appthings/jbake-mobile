@@ -30,7 +30,7 @@ swiper
 				if(title = null || title.length < 5) continue
 				var link = item.link
 				if(link = null || link.length < 5) continue
-				console.log(num, item.title )
+				Logger.log(num, item.title )
 
 				var tag = document.createElement('car-swipe')
 				cars.appendChild(tag)
@@ -38,17 +38,17 @@ swiper
 
 			}//for
 				wrapN.appendChild(slide)
-				console.log(' .')
+				Logger.log(' .')
 		}//()
 
 		this.on('mount', function(){
-			console.log('swiper mount')
+			Logger.log('swiper mount')
 			parse()
 		})// on mount
 
 		var swiper
 		function initSwiper() {
-			console.log('swiper init')
+			Logger.log('swiper init')
 			
 			swiper = app.swiper.create('.swiper-container', {
 				direction: 'vertical',
@@ -70,7 +70,7 @@ swiper
 
 		function parse() {
 			parser.parseURL(access(), function(err, feed) {
-				console.log(feed.items.length) // we have data
+				Logger.log(feed.items.length) // we have data
 
 				clearWrap()
 

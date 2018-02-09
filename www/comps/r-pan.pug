@@ -9,14 +9,14 @@ r-pan
 	script.
 
 		this.on('mount', function(){
-			console.log('r-pan mount')	
+			Logger.log('r-pan mount')	
 		})
 
 		var thiz = this
 		story.on('change', function( updates ){
 			var item = story.getState().store
-			console.log( Object.keys(item) )
-			console.log( item.title )
+			Logger.log( Object.keys(item) )
+			Logger.log( item.title )
 
 			thiz.title = item.title
 			var st = document.getElementById('story')
