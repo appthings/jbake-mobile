@@ -2,7 +2,7 @@ doctype html
 html
 	head
 		meta(charset='utf-8')
-		script(src='assets/jsLibs/logger.js')
+		script(src='assets/jsLibs/Logger.js')
 		script(src='ts/initLog.js')
 		meta(name='viewport', content='width=device-width, initial-scale=1, maximum-scale=1, minimum-scale=1, user-scalable=no, minimal-ui, viewport-fit=cover')
 
@@ -62,21 +62,21 @@ html
 
 			function onReady() {
 				$$ = Dom7
-				var app = new Framework7({
+				app = new Framework7({
 					root: '#app',
 					on: {
 						init: function () {
 							Logger.log('app')
+							initSwiperComp()
 						}//init
 					}//on
 				})//app
 
-				modelInit()
-				initSwiperComp()
 				riot.mount('r-pan')
 			}
 
 			function initSwiperComp() {
+				modelInit()
 				riot.mount('swiper')
 			}
 

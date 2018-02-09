@@ -4,8 +4,9 @@ class LogzioLogger {
 
 	constructor(apiKey: string) {
 		this.key = apiKey
+		var thiz = this
 		window.onerror = function (msg, url, line, col) {
-			 this.log({
+			 thiz.log({
 				message: msg,
 				url: url,
 				line: line,
@@ -31,6 +32,7 @@ class LogzioLogger {
 					console.log("Failed to send log because of exception:\n" + ex)
 			}
 		}
+		console.log(data)
 	}//()
 
 }//class
