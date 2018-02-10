@@ -6,6 +6,8 @@ declare var RSSParser: any
 
 declare var parser: any
 
+// I did not convert to ES6 yes, but there is class example in assets/jsLibs?logger.ts
+
 // fluxify
 function act(action, arg) {// sugar
 	fluxify.doAction(action, arg )
@@ -47,4 +49,4 @@ function modelInit() {
 function access() {//specify url
 	Logger.log('fetching')
 	return CORS+RED;
-}
+} 
