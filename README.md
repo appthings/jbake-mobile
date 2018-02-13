@@ -21,16 +21,16 @@ With your editor, create a file www/ts/initLog.js, copy / paste this code using 
 
 2. Build: (first we need gulp dependencies )
 
-			npm -i
+			npm i
 
 			gulp
 
 3. Run:
 Start any http/webserver with www as root. I use WedgeServer or 
 in VSCode I use 'LiveServer' plugin.
-Open in browser.
+Open in browser! That's it.
 
-4. Modify code:
+4. Bonus: Modify code.
 
 			gulp watch
 
