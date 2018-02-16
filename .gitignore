@@ -34,3 +34,5 @@ node_modules
 ## over ride
 **/.DS_Store
 **/Thumbs.db
+/zold
+/xwww
