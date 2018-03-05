@@ -37,3 +37,6 @@ Open in browser! That's it.
 			//change www/ts/model.ts access method to return a different RSS file
 
 Build and code comments wellcome. Just use a git issue to do that.
+
+### NOTE
+The x.pug layout may help you on a new project.
