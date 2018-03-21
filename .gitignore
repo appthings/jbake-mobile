@@ -13,11 +13,8 @@ node_modules
 !**/*.ts
 !**/*.md
 
-!/www/assets/fonts/*.css
-!**/*.eot
-!**/*.ttf
-!**/*.woff
-!**/*.woff2
+!/www/assets/**
+
 
 #assets
 !**/*.ico
