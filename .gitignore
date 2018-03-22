@@ -3,9 +3,11 @@
 !*/
 node_modules
 
-# except white list to 
+# except white list to
 # include (w/ ! prefix) :
 !.gitignore
+!*.editorconfig
+
 !**/*.less
 !**/*.scss
 !**/*.sass
